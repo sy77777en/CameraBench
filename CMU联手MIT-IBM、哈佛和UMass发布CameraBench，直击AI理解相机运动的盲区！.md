@@ -29,20 +29,21 @@
 
 #### 🧪 “大考”成绩单：SfMs / SLAMs 集体翻车
 
-<img src="https://linzhiqiu.github.io/papers/camerabench/images/5.gif" width="720" style="display:block; margin:auto;">
+<p align="center">
+  <img src="https://linzhiqiu.github.io/papers/camerabench/images/5.gif" width="720">
+</p>
 
-<div style="
-     display:flex;            /* 并排 */
-     justify-content:space-between;
-     width:720px; margin:8px auto 0;   /* 与 GIF 宽度一致并居中 */
-     font-size:90%; line-height:1.35em;">
-    <div style="width:48%; text-align:center;">
-      <b>Left: A </b><span style="color:#d9534f;"><b>lead tracking</b></span> shot where the camera moves backward as the subject walks forward. Due to unchanged subject framing and lack of distinct background textures, MegaSAM fails to detect camera translation and COLMAP crashes.</b>
-  	</div>
-    <div style="width:48%; text-align:center;">
-      <b>Right: A </b><span style="color:#d9534f;"><b>roll-clockwise</b></span> shot in a low-parallax scene where both MegaSAM and COLMAP fail to converge and output random trajectories with nonexistent motion.</b>
-    </div>
-</div>
+<table width="720" align="center">
+  <tr>
+    <td width="50%" align="center" style="font-size:90%; line-height:1.4em;">
+      <b>Left:</b> A <span style="color:#d9534f;"><b>lead tracking</b></span> shot where the camera moves backward as the subject walks forward. Due to unchanged subject framing and lack of distinct background textures, MegaSAM fails to detect camera translation and COLMAP crashes.
+    </td>
+    <td width="50%" align="center" style="font-size:90%; line-height:1.4em;">
+      <b>Right:</b> A <span style="color:#d9534f;"><b>roll-clockwise</b></span> shot in a low-parallax scene where both MegaSAM and COLMAP fail to converge and output random trajectories with nonexistent motion.
+    </td>
+  </tr>
+</table>
+
 
 **纹理 & 光照一低，几何派就“晕车”**
 
