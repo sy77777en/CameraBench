@@ -1,3 +1,5 @@
+
+
 ## 全球顶尖 AI「听不懂镜头话」？CameraBench 给它们上了堂“电影语言课”！
 
 ##### CMU联手MIT-IBM、Adobe、哈佛和UMass发布CameraBench，直击AI理解相机运动的盲区！
@@ -192,22 +194,29 @@ GPT‑4o 和 Gemini 看起来能说会道，
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.1.png" width="40%"/>
 </p>
 
+
 <p align="center">
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.2.gif" width="55%"/>
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.2.png" width="40%"/>
 </p>
+
+
 
 <p align="center">
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.3.gif" width="55%"/>
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.3.png" width="40%"/>
 </p>
 
+
 ### 总结：让 AI 学会“看镜头”，不是不够大，而是没人教
 
 📸 大模型会说话不等于看懂镜头
- 🧑‍🏫 我们设计教材，先教人再教 AI
- 📈 精调 Qwen2.5‑VL‑7B，仅用 1.4k 条高质量数据，就做到几何 + 语义双线领先
- 💬 不只是选对选项题，连主观描述也开始像“懂拍片的人”了
+
+🧑‍🏫 我们设计教材，先教人再教 AI
+
+📈 精调 Qwen2.5‑VL‑7B，仅用 1.4k 条高质量数据，就做到几何 + 语义双线领先
+
+💬 不只是选对选项题，连主观描述也开始像“懂拍片的人”了
 
 **CameraBench 开了个头**：
  不是测生成质量、也不是画图像情绪，而是专注一个问题——
