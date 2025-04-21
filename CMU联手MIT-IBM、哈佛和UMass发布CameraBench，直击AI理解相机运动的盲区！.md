@@ -194,13 +194,10 @@ GPT‑4o 和 Gemini 看起来能说会道，
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.1.png" width="40%"/>
 </p>
 
-
 <p align="center">
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.2.gif" width="55%"/>
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.2.png" width="40%"/>
 </p>
-
-
 
 <p align="center">
   <img src="https://linzhiqiu.github.io/papers/camerabench/images/caption.3.gif" width="55%"/>
