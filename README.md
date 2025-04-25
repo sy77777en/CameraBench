@@ -138,9 +138,17 @@ We highlight the following key findings:
 
 ## Visual Demonstrations
 
-| VQA Leaderboard | Animation Sequence |
-|-----------------|-------------------|
-| ![VQA Leaderboard](./images/VQA-Leaderboard.png) | ![Animation 1](./images/8-1.gif) <br> ![Animation 2](./images/8-2.gif) <br> ![Animation 3](./images/8-3.gif) <br> **Question**: Does the camera move forward during the video? |
+<table>
+  <tr>
+    <td><img src="VQA-Leaderboard.png" alt="VQA Leaderboard" width="400"></td>
+    <td>
+      <img src="8-1.gif" alt="Animation 1" width="400"><br>
+      <img src="8-2.gif" alt="Animation 2" width="400"><br>
+      <img src="8-3.gif" alt="Animation 3" width="400"><br>
+      <b>Question</b>: Does the camera move forward during the video?
+    </td>
+  </tr>
+</table>
 
 ## Citation
 
