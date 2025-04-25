@@ -51,6 +51,78 @@ except AttributeError as e:
 
 ---
 
+```python
+# 🤗 Get the test data from Hugging Face
+
+import os
+import json
+import argparse
+import subprocess
+from tqdm import tqdm
+
+HF_PREFIX = "https://huggingface.co/datasets/syCen/CameraBench/resolve/main/videos"
+
+def save_to_json(data, path):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=4)
+
+def download_hf_video(video_names, save_dir="hf_videos"):
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    print(f"📥 Downloading {len(video_names)} videos to {save_dir}")
+    failed_videos = []
+    successful_videos = []
+
+    for video_name in tqdm(video_names, desc="Downloading videos", unit="video"):
+        path = os.path.join(save_dir, video_name)
+        if os.path.exists(path) and os.path.getsize(path) > 0:
+            successful_videos.append(video_name)
+            continue
+
+        url = f"{HF_PREFIX}/{video_name}"
+        result = subprocess.run(
+            ["wget", url, "-O", path, "-q"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL
+        )
+
+        if result.returncode == 0:
+            successful_videos.append(video_name)
+        else:
+            print(f"❌ Failed to download {video_name}")
+            if os.path.exists(path):
+                os.remove(path)
+            failed_videos.append(video_name)
+
+    print(f"\n✅ Successfully downloaded {len(successful_videos)} videos")
+    print(f"❌ Failed to download {len(failed_videos)} videos")
+
+    if failed_videos:
+        failed_path = os.path.join(save_dir, "failed_videos.json")
+        save_to_json(failed_videos, failed_path)
+        print(f"💾 Saved failed video list to: {failed_path}")
+
+    return successful_videos
+
+# Example usage
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Download videos from Hugging Face using video_name list from JSON.")
+    parser.add_argument("--json_path", type=str, required=True,
+                        help="Path to the JSON file containing video metadata with 'video_name' fields.")
+    parser.add_argument("--save_dir", type=str, default="hf_videos",
+                        help="Directory to save the downloaded videos.")
+    args = parser.parse_args()
+
+    with open(args.json_path, "r") as f:
+        data = json.load(f)
+
+    video_names = [item["video_name"] for item in data if "video_name" in item]
+
+    download_hf_video(video_names, save_dir=args.save_dir) 
+
+---
+
 # SfMs vs. VLMs on CameraBench
 We highlight the following key findings:
 
