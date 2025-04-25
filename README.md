@@ -151,12 +151,12 @@ We highlight the following key findings:
           🤔: Yes
         </div>
         <div>
-          <img src="./images/8-2.gif" width="400"><br>
+          <img src="./images/8-2.gif" width="420"><br>
           🤖: Does the camera move down during the video? <br>
           🤔: Yes
         </div>
         <div>
-          <img src="./images/8-3.gif" width="400"><br>
+          <img src="./images/8-3.gif" width="420"><br>
           🤖: Does the camera move forward during the video? <br>
           🤔: No
         </div>
