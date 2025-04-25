@@ -140,7 +140,7 @@ We highlight the following key findings:
 
 | VQA Leaderboard | Animation Sequence |
 |-----------------|-------------------|
-| ![VQA Leaderboard](VQA-Leaderboard.png) | ![Animation 1](8-1.gif) <br> ![Animation 2](8-2.gif) <br> ![Animation 3](8-3.gif) <br> **Question**: Does the camera move forward during the video? |
+| ![VQA Leaderboard](./images/VQA-Leaderboard.png) | ![Animation 1](./images/8-1.gif) <br> ![Animation 2](./images/8-2.gif) <br> ![Animation 3](./images/8-3.gif) <br> **Question**: Does the camera move forward during the video? |
 
 ## Citation
 
