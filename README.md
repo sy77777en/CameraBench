@@ -141,7 +141,7 @@ We highlight the following key findings:
 <table>
   <tr>
     <td>
-      <img src="./images/VQA-Leaderboard.png" width="430">
+      <img src="./images/VQA-Leaderboard.png" width="440">
     </td>
     <td>
       <div style="display: flex; flex-direction: column; gap: 1em;">
