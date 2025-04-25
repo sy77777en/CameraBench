@@ -140,12 +140,17 @@ We highlight the following key findings:
 
 <table>
   <tr>
-    <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="410"></td>
+    <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="400"></td>
     <td>
-      <img src="./images/8-1.gif" alt="Animation 1" width="430"><br>
-      <img src="./images/8-2.gif" alt="Animation 2" width="430"><br>
-      <img src="./images/8-3.gif" alt="Animation 3" width="430"><br>
+      <img src="./images/8-1.gif" alt="Animation 1" width="400"><br>
+         <b>Question</b>: Does the camera move left during the video?
+         <b>Answer</b>: Yes
+      <img src="./images/8-2.gif" alt="Animation 2" width="400"><br>
+         <b>Question</b>: Does the camera move down during the video?
+         <b>Answer</b>: Yes
+      <img src="./images/8-3.gif" alt="Animation 3" width="400"><br>
       <b>Question</b>: Does the camera move forward during the video?
+      <b>Answer</b>: No
     </td>
   </tr>
 </table>
