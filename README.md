@@ -4,9 +4,9 @@
 
 ## Preview
 
-### Model: Coming Soon! 🔥
-### Training Data: Coming Soon!
-### Test Data: Released —— 2025.04.25
+#### Model: Coming Soon! 🔥
+#### Training Data: Coming Soon! 🔥
+#### Test Data: Released —— 2025.04.25
 
 ## Taxonomy of Camera Motion Primitives
 
