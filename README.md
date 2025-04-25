@@ -146,7 +146,7 @@ We highlight the following key findings:
     <td>
       <div style="display: flex; flex-direction: column; gap: 1em;">
         <div>        
-          <img src="./images/8-1.gif" width="400"><br>
+          <img src="./images/8-1.gif" width="420"><br>
           🤖: Does the camera track the subject from a side view? <br>
           🤔: Yes
         </div>
