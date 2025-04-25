@@ -140,7 +140,7 @@ We highlight the following key findings:
 
 <table>
   <tr>
-    <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="400"></td>
+    <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="430"></td>
     <td>
       <img src="./images/8-1.gif" alt="Animation 1" width="400"><br>
          <b>Question</b>: Does the camera move left during the video?
