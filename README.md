@@ -145,15 +145,33 @@ We highlight the following key findings:
     </td>
     <td>
       <div style="display: flex; flex-direction: column; gap: 1em;">
-        <div>
+        <div style="
+          border:1px solid #ccc;
+          border-radius:8px;
+          padding:8px;
+          background:#fafafa;
+          display:inline-block;
+        ">        
           <img src="./images/8-1.gif" width="400"><br>
           <b>🤖</b>: Does the camera track the subject from a side view? <br><b>🤔</b>: Yes
         </div>
-        <div>
+        <div style="
+          border:1px solid #ccc;
+          border-radius:8px;
+          padding:8px;
+          background:#fafafa;
+          display:inline-block;
+        ">
           <img src="./images/8-2.gif" width="400"><br>
           <b>🤖</b>: Does the camera move down during the video? <br><b>🤔</b>: Yes
         </div>
-        <div>
+        <div style="
+          border:1px solid #ccc;
+          border-radius:8px;
+          padding:8px;
+          background:#fafafa;
+          display:inline-block;
+        ">
           <img src="./images/8-3.gif" width="400"><br>
           <b>🤖</b>: Does the camera move forward during the video?<br><b>🤔</b>: No
         </div>
