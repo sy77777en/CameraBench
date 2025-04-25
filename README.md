@@ -150,6 +150,18 @@ We highlight the following key findings:
   </tr>
 </table>
 
+<div style="display: flex; align-items: stretch; width: 100%;">
+  <div style="flex: 1; padding: 10px; text-align: center;">
+    <img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" style="width: 100%; max-width: 400px;">
+  </div>
+  <div style="flex: 1; padding: 10px; text-align: center;">
+    <img src="./images/8-1.gif" alt="Animation 1" style="width: 100%; max-width: 400px;"><br>
+    <img src="./images/8-2.gif" alt="Animation 2" style="width: 100%; max-width: 400px;"><br>
+    <img src="./images/8-3.gif" alt="Animation 3" style="width: 100%; max-width: 400px;"><br>
+    <b>Question</b>: Does the camera move forward during the video?
+  </div>
+</div>
+
 ## Citation
 
 If you find this repository useful for your research, please use the following.
