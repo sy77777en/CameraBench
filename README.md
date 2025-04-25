@@ -138,19 +138,34 @@ We highlight the following key findings:
 
 ## VQA evaluation on VLMs
 
+<style>
+  td {
+    display: flex;
+    align-items: center;      
+    /* justify-content: center;
+  }
+</style>
+
 <table>
   <tr>
-    <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="530"></td>
     <td>
-      <img src="./images/8-1.gif" alt="Animation 1" width="400"><br>
-         <b>Question</b>: Does the camera move left during the video?
-         <b>Answer</b>: Yes
-      <img src="./images/8-2.gif" alt="Animation 2" width="400"><br>
-         <b>Question</b>: Does the camera move down during the video?
-         <b>Answer</b>: Yes
-      <img src="./images/8-3.gif" alt="Animation 3" width="400"><br>
-      <b>Question</b>: Does the camera move forward during the video?
-      <b>Answer</b>: No
+      <img src="./images/VQA-Leaderboard.png" width="430">
+    </td>
+    <td>
+      <div style="display: flex; flex-direction: column; gap: 1em;">
+        <div>
+          <img src="./images/8-1.gif" width="400"><br>
+          <b>Question</b>: …<br><b>Answer</b>: Yes
+        </div>
+        <div>
+          <img src="./images/8-2.gif" width="400"><br>
+          <b>Question</b>: …<br><b>Answer</b>: Yes
+        </div>
+        <div>
+          <img src="./images/8-3.gif" width="400"><br>
+          <b>Question</b>: …<br><b>Answer</b>: No
+        </div>
+      </div>
     </td>
   </tr>
 </table>
