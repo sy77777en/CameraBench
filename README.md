@@ -150,17 +150,17 @@ We highlight the following key findings:
         <div>        
           <img src="./images/8-1.gif" width="405"><br>
           🤔: Does the camera track the subject from a side view? <br>
-          🤖: ✅   🙋: ✅
+          🤖: ✅  &nbsp;&nbsp;&nbsp; 🙋: ✅
         </div>
         <div>
           <img src="./images/8-2.gif" width="405"><br>
           🤔: Does the camera move down during the video? <br>
-          🤖: ❌   🙋: ✅
+          🤖: ❌  &nbsp;&nbsp;&nbsp; 🙋: ✅
         </div>
         <div>
           <img src="./images/8-3.gif" width="405"><br>
           🤔: Does the camera move forward during the video? <br>
-          🤖: ✅   🙋: ✅
+          🤖: ✅  &nbsp;&nbsp;&nbsp; 🙋: ✅
         </div>
       </div>
     </td>
