@@ -148,17 +148,17 @@ We highlight the following key findings:
     <td>
       <div style="display: flex; flex-direction: column; gap: 1em;">
         <div>        
-          <img src="./images/8-1.gif" width="410"><br>
+          <img src="./images/8-1.gif" width="405"><br>
           🤖: Does the camera track the subject from a side view? <br>
           🤔: Yes
         </div>
         <div>
-          <img src="./images/8-2.gif" width="410"><br>
+          <img src="./images/8-2.gif" width="405"><br>
           🤖: Does the camera move down during the video? <br>
           🤔: Yes
         </div>
         <div>
-          <img src="./images/8-3.gif" width="410"><br>
+          <img src="./images/8-3.gif" width="405"><br>
           🤖: Does the camera move forward during the video? <br>
           🤔: No
         </div>
@@ -167,37 +167,6 @@ We highlight the following key findings:
   </tr>
 </table>
 
-<table>
-  <tr>
-    <td rowspan="3" valign="top">
-      <img
-        src="./images/VQA-Leaderboard.png"
-        width="440"
-        height="100%"
-        alt="VQA Leaderboard"
-      >
-    </td>
-    <td valign="top">
-      <img src="./images/8-1.gif" width="410" alt="Animation 1"><br>
-      🤖: Does the camera track the subject from a side view?<br>
-      🤔: Yes
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src="./images/8-2.gif" width="410" alt="Animation 2"><br>
-      🤖: Does the camera move down during the video?<br>
-      🤔: Yes
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <img src="./images/8-3.gif" width="410" alt="Animation 3"><br>
-      🤖: Does the camera move forward during the video?<br>
-      🤔: No
-    </td>
-  </tr>
-</table>
 
 
 
