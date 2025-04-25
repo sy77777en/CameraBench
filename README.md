@@ -159,7 +159,7 @@ We highlight the following key findings:
         </div>
         <div>
           <img src="./images/8-3.gif" width="405"><br>
-          🤔: Does the camera move backward during the video? <br>
+          🤔: Does the camera move backward while zooming in during the video? <br>
           🤖: ❌  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🙋: ✅
         </div>
       </div>
