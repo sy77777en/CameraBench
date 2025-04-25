@@ -138,7 +138,7 @@ We highlight the following key findings:
 
 ## VQA evaluation on VLMs
 
-<table>
+<table  width="80%">
   <tr>
     <td>
     <div style="display: flex; flex-direction: column; gap: 1em;">
