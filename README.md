@@ -4,7 +4,9 @@
 
 ## Preview
 
-[Watch the demo video](https://github.com/sy77777en/CameraBench/blob/main/images/preview.mp4)
+### Model: Coming Soon! 🔥
+### Training Data: Coming Soon!
+### Test Data: Released —— 2025.04.25
 
 ## Taxonomy of Camera Motion Primitives
 
