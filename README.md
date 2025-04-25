@@ -2,6 +2,10 @@
 
 | [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/) | [&#129303;**HuggingFace**](https://huggingface.co/datasets/syCen/CameraBench) | [**📖Paper**](https://arxiv.org/abs/2504.15376) |
 
+## Preview
+
+[Watch the demo video](https://github.com/sy77777en/CameraBench/blob/main/images/preview.mp4)
+
 ## Taxonomy of Camera Motion Primitives
 
 ![Demo GIF](./images/3.gif)
