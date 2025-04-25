@@ -149,18 +149,18 @@ We highlight the following key findings:
       <div style="display: flex; flex-direction: column; gap: 1em;">
         <div>        
           <img src="./images/8-1.gif" width="405"><br>
-          🤖: Does the camera track the subject from a side view? <br>
-          🤔: Yes
+          🤔: Does the camera track the subject from a side view? <br>
+          🤖: ✅   🙋: ✅
         </div>
         <div>
           <img src="./images/8-2.gif" width="405"><br>
-          🤖: Does the camera move down during the video? <br>
-          🤔: Yes
+          🤔: Does the camera move down during the video? <br>
+          🤖: ❌   🙋: ✅
         </div>
         <div>
           <img src="./images/8-3.gif" width="405"><br>
-          🤖: Does the camera move forward during the video? <br>
-          🤔: No
+          🤔: Does the camera move forward during the video? <br>
+          🤖: ✅   🙋: ✅
         </div>
       </div>
     </td>
