@@ -104,6 +104,7 @@ This table compares **CLIPScore**, **ITMScore**, and **VQAScore** models on **sk
 | **Qwen2.5-VL-7B (SFT)**   | **60.3** | **79.9** | **57.7** | **89.2** | **87.0** | **82.0** |
 
 
+
 ## VQA Evaluation
 
 This table reports **Accuracy (Acc)** and **Question Accuracy (Q-Acc)**, where Q-Acc awards a point only if *both* videos for a given question are answered correctly [NaturalBench]. The evaluation covers multiple skills, including Motion & Steadiness, Scene Dynamics, Motion Speed, Motion Direction, Confusable Motion, Has Motion, Shot Tracking, Only Motion, and Complex Description. **Bold** indicates the best performance, and *italic* indicates the second-best.
