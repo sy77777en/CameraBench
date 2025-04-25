@@ -167,6 +167,36 @@ We highlight the following key findings:
   </tr>
 </table>
 
+<table>
+  <tr>
+    <!-- 左侧图片跨三行 -->
+    <td rowspan="3" valign="top">
+      <img src="./images/VQA-Leaderboard.png" width="440" alt="VQA Leaderboard">
+    </td>
+    <!-- 右侧第 1 行 -->
+    <td valign="top">
+      <img src="./images/8-1.gif" width="410" alt="Animation 1"><br>
+      🤖: Does the camera track the subject from a side view?<br>
+      🤔: Yes
+    </td>
+  </tr>
+  <tr>
+    <!-- 右侧第 2 行 -->
+    <td valign="top">
+      <img src="./images/8-2.gif" width="410" alt="Animation 2"><br>
+      🤖: Does the camera move down during the video?<br>
+      🤔: Yes
+    </td>
+  </tr>
+  <tr>
+    <!-- 右侧第 3 行 -->
+    <td valign="top">
+      <img src="./images/8-3.gif" width="410" alt="Animation 3"><br>
+      🤖: Does the camera move forward during the video?<br>
+      🤔: No
+    </td>
+  </tr>
+</table>
 
 
 
