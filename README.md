@@ -5,6 +5,7 @@
 ## Overview
 
 ![Demo GIF](./images/3.gif)
+Here we demonstrate our taxonomy includes three reference frames (object-, ground-, and camera-centric) and defines key motion types, including translation (e.g., upward), rotation (e.g., roll clockwise), intrinsic changes (e.g., zoom-in), circular motion (e.g., arcing), steadiness (e.g., shaky), and tracking shots (e.g., side-tracking).
 
 ## Citation
 
