@@ -136,6 +136,11 @@ We highlight the following key findings:
 - Although generative VLMs (evaluated using [VQAScore](https://linzhiqiu.github.io/papers/vqascore/)) are weaker than SfM/SLAM, they generally outperform discriminative VLMs that use CLIPScore/ITMScore. Furthermore, they are able to capture the **semantic primitives** that depend on scene content, while SfMs struggle to do so. Motivated by this, we apply supervised fine-tuning (SFT) to a generative VLM (Qwen2.5-VL) on a separately annotated training set of ~1400 videos. We show that simple SFT on small-scale (yet high-quality) data significantly boosts performance by 1-2x, making it match the SOTA MegaSAM in overall AP.
 ![Demo GIF](./images/sfm_vs_vlm.jpg)
 
+## Visual Demonstrations
+
+| VQA Leaderboard | Animation Sequence |
+|-----------------|-------------------|
+| ![VQA Leaderboard](VQA-Leaderboard.png) | ![Animation 1](8-1.gif) <br> ![Animation 2](8-2.gif) <br> ![Animation 3](8-3.gif) <br> **Question**: Does the camera move forward during the video? |
 
 ## Citation
 
