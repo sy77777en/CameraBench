@@ -138,7 +138,7 @@ We highlight the following key findings:
 
 ## VQA evaluation on VLMs
 
-<table  width="80%">
+<table style="width: 80%; margin: 0 auto;">
   <tr>
     <td>
     <div style="display: flex; flex-direction: column; gap: 1em;">
