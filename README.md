@@ -147,7 +147,7 @@ We highlight the following key findings:
       <div style="display: flex; flex-direction: column; gap: 1em;">
         <div>
           <img src="./images/8-1.gif" width="400"><br>
-          <b>Question</b>: Does the camera move left during the video? <br><b>Answer</b>: Yes
+          <b>Question</b>: Does the camera track the subject from a side view? <br><b>Answer</b>: Yes
         </div>
         <div>
           <img src="./images/8-2.gif" width="400"><br>
