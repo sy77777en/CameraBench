@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Structured Model Table</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      padding: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    thead th {
+      background-color: #fafafa;
+      border-bottom: 2px solid #ccc;
+      padding: 10px;
+      font-size: 14px;
+    }
+    tbody td {
+      padding: 10px;
+      font-size: 14px;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #fcfcfc;
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #f2f2f2;
+    }
+    .score-box {
+      padding: 4px 6px;
+      border-radius: 6px;
+      display: inline-block;
+      min-width: 38px;
+      font-weight: 500;
+    }
+    .gold { background-color: #f6e86c; }
+    .pink { background-color: #f3d1d1; }
+    .green { background-color: #d2e3d2; }
+    .orange { background-color: #f2e2d1; }
+    .blue { background-color: #d1dbe8; }
+    .purple { background-color: #e0d5ec; }
+    .arrow { margin-left:4px; font-size:10px; color:#bbb; }
+    .arrow.active { color:#000; }   /* 当前排序列 */
+  </style>
+</head>
+<body>
+
+<h2>SfMs and VLMs performance on CameraBench</h2>
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Models</th>
+      <th colspan="6">Translation (Dolly/Pedestal/Truck)</th>
+      <th colspan="2">Zooming</th>
+      <th colspan="6">Rotation (Pan/Tilt/Roll)</th>
+      <th data-index="14" rowspan="2">Static</th>
+      <th data-index="15" rowspan="2">Avg</th>
+    </tr>
+    <tr>
+      <th data-index="0">In</th><th data-index="1">Out</th><th data-index="2">Up</th><th data-index="3">Down</th><th data-index="4">Right</th><th data-index="5" class="group-end">Left</th>
+      <th data-index="6">In</th><th data-index="7" class="group-end">Out</th>
+      <th data-index="8">Right</th><th data-index="9">Left</th><th data-index="10">Up</th><th data-index="11">Down</th><th data-index="12">CW</th><th data-index="13" class="group-end">CCW</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🏅Qwen-2.5VL-7B (Ours SFT)</td>
+      <td>83.2</td><td>48.6</td>
+      <td>27.2</td><td>48.8</td>
+      <td>62.6</td><td>54.3</td>
+      <td>51.3</td><td>70.7</td>
+      <td>77.6</td><td>86.9</td>
+      <td>70.4</td><td>58.0</td>
+      <td>38.5</td><td>46.3</td>
+      <td>65.2</td><td>59.3</td>
+    </tr>
+    <tr>
+      <td>🥈MegaSAM</td>
+      <td>73.8</td><td>43.9</td><td>24.2</td><td>29.1</td><td>45.3</td><td>44.2</td>
+      <td>11.1</td><td>10.2</td>
+      <td>79.5</td><td>82.2</td><td>73.8</td><td>65.3</td><td>71.5</td><td>75.8</td>
+      <td>22.0</td><td>50.1</td>
+    </tr>
+    <tr>
+      <td>🥉MASt3R</td>
+      <td>47.5</td><td>21.1</td><td>23.5</td><td>40.2</td><td>38.7</td><td>38.1</td>
+      <td>42.2</td><td>46.6</td>
+      <td>66.6</td><td>58.0</td><td>63.2</td><td>40.3</td><td>50.4</td><td>53.5</td>
+      <td>15.7</td><td>43.1</td>
+    </tr>
+    <tr>
+      <td>CUT3R</td>
+      <td>68.9</td><td>50.4</td><td>24.7</td><td>34.2</td><td>37.0</td><td>27.6</td>
+      <td>15.9</td><td>21.3</td>
+      <td>59.1</td><td>65.0</td><td>65.0</td><td>47.5</td><td>60.7</td><td>66.2</td>
+      <td>15.1</td><td>42.7</td>
+    </tr>
+    <tr>
+      <td>VGGSFM</td>
+      <td>56.6</td><td>28.9</td><td>28.7</td><td>38.2</td><td>48.9</td><td>35.3</td>
+      <td>21.7</td><td>17.3</td>
+      <td>60.9</td><td>58.7</td><td>46.6</td><td>43.3</td><td>61.4</td><td>55.5</td>
+      <td>16.7</td><td>41.3</td>
+    </tr>
+    <tr>
+      <td>DUSt3R</td>
+      <td>58.9</td><td>24.0</td><td>30.7</td><td>18.0</td><td>38.3</td><td>26.9</td>
+      <td>18.2</td><td>24.6</td>
+      <td>59.4</td><td>63.8</td><td>32.9</td><td>27.3</td><td>61.0</td><td>57.9</td>
+      <td>13.1</td><td>37.0</td>
+    </tr>
+    <tr>
+      <td>GPT-4o</td>
+      <td>66.3</td><td>29.2</td><td>21.1</td><td>38.2</td><td>38.0</td><td>21.9</td>
+      <td>41.7</td><td>39.3</td>
+      <td>44.7</td><td>42.1</td><td>43.6</td><td>35.5</td><td>24.0</td><td>28.7</td>
+      <td>32.0</td><td>36.4</td>
+    </tr>
+    <tr>
+      <td>InternVL2.5-26B</td>
+      <td>63.6</td><td>11.8</td><td>21.1</td><td>23.6</td><td>27.2</td><td>19.4</td>
+      <td>21.8</td><td>31.6</td>
+      <td>42.5</td><td>38.3</td><td>44.9</td><td>43.6</td><td>14.3</td><td>18.2</td>
+      <td>25.1</td><td>29.8</td>
+    </tr>
+    <tr>
+      <td>Qwen2.5-VL-7B</td>
+      <td>63.0</td><td>14.1</td><td>20.1</td><td>22.3</td><td>28.5</td><td>27.7</td>
+      <td>23.2</td><td>27.2</td>
+      <td>36.5</td><td>44.6</td><td>38.4</td><td>25.7</td><td>26.0</td><td>25.5</td>
+      <td>20.2</td><td>29.5</td>
+    </tr>
+    <tr>
+      <td>Qwen2.5-VL-32B</td>
+      <td>66.8</td><td>19.1</td><td>11.1</td><td>31.4</td><td>32.1</td><td>30.4</td>
+      <td>27.8</td><td>32.6</td>
+      <td>43.2</td><td>50.0</td><td>53.2</td><td>44.0</td><td>26.6</td><td>29.0</td>
+      <td>28.8</td><td>35.1</td>
+    </tr>
+    <tr>
+      <td>Qwen2.5-VL-72B</td>
+      <td>67.2</td><td>19.1</td><td>12.8</td><td>26.5</td><td>33.3</td><td>26.1</td>
+      <td>27.5</td><td>41.2</td>
+      <td>50.6</td><td>46.8</td><td>53.4</td><td>31.0</td><td>33.3</td><td>30.9</td>
+      <td>29.1</td><td>35.3</td>
+    </tr>
+    <tr>
+      <td>InternVL2.5-8B</td>
+      <td>67.9</td><td>12.9</td><td>28.1</td><td>25.9</td><td>23.4</td><td>23.2</td>
+      <td>18.6</td><td>32.1</td>
+      <td>37.4</td><td>30.9</td><td>37.6</td><td>36.9</td><td>11.5</td><td>25.3</td>
+      <td>23.4</td><td>29.5</td>
+    </tr>
+    <tr>
+      <td>COLMAP</td>
+      <td>36.2</td><td>13.1</td><td>11.9</td><td>19.7</td><td>34.1</td><td>30.0</td>
+      <td>13.9</td><td>14.2</td>
+      <td>43.9</td><td>46.4</td><td>28.3</td><td>19.1</td><td>42.1</td><td>48.7</td>
+      <td>7.5</td><td>27.3</td>
+    </tr>
+    <tr>
+      <td>LLAVA-Video-7B</td>
+      <td>54.7</td><td>15.2</td><td>16.5</td><td>19.3</td><td>27.1</td><td>23.6</td>
+      <td>16.2</td><td>16.9</td>
+      <td>33.6</td><td>36.8</td><td>26.9</td><td>37.2</td><td>16.1</td><td>21.7</td>
+      <td>22.1</td><td>25.6</td>
+    </tr>
+    <tr>
+      <td>LLAVA-OneVision-7B</td>
+      <td>46.8</td><td>13.5</td><td>12.6</td><td>16.9</td><td>23.7</td><td>20.2</td>
+      <td>10.7</td><td>14.4</td>
+      <td>33.5</td><td>33.6</td><td>16.9</td><td>31.4</td><td>19.3</td><td>20.8</td>
+      <td>18.8</td><td>22.2</td>
+    </tr>
+    <tr>
+      <td>InternVideo2-Chat-8B</td>
+      <td>69.9</td><td>18.5</td><td>19.3</td><td>17.6</td><td>17.9</td><td>23.4</td>
+      <td>12.2</td><td>10.4</td>
+      <td>22.6</td><td>22.7</td><td>17.2</td><td>22.8</td><td>19.6</td><td>16.4</td>
+      <td>20.2</td><td>22.0</td>
+    </tr>
+    <tr>
+      <td>Tarsier-Recap-7B</td>
+      <td>59.7</td><td>15.1</td><td>25.7</td><td>23.7</td><td>28.8</td><td>21.5</td>
+      <td>14.4</td><td>15.0</td>
+      <td>22.8</td><td>27.3</td><td>24.6</td><td>21.6</td><td>15.2</td><td>18.7</td>
+      <td>30.7</td><td>21.0</td>
+    </tr>
+    <tr>
+      <td>mPLUG-Owl3-7B</td>
+      <td>47.6</td><td>12.9</td><td>13.9</td><td>16.9</td><td>17.3</td><td>18.5</td>
+      <td>12.9</td><td>10.6</td>
+      <td>31.4</td><td>26.6</td><td>26.1</td><td>37.0</td><td>10.4</td><td>12.2</td>
+      <td>17.8</td><td>20.8</td>
+    </tr>
+    <tr>
+      <td>InternLMXComposer2.5-7B</td>
+      <td>49.0</td><td>10.6</td><td>11.4</td><td>10.4</td><td>14.6</td><td>10.6</td>
+      <td>11.8</td><td>16.5</td>
+      <td>14.3</td><td>13.9</td><td>14.7</td><td>17.5</td><td>11.7</td><td>18.1</td>
+      <td>21.8</td><td>16.5</td>
+    </tr>
+    <!-- <tr>
+      <td>Cockatiel‑13B</td><td>32</td><td>729</td>
+      <td><span class="score-box gray">43.8</span></td><td><span class="score-box gray">2.3</span></td>
+      <td><span class="score-box pink">44.4</span></td><td><span class="score-box pink">2.3</span></td>
+      <td><span class="score-box green">42.6</span></td><td><span class="score-box green">2.2</span></td>
+      <td><span class="score-box orange">43.5</span></td><td><span class="score-box orange">2.3</span></td>
+      <td><span class="score-box blue">44.1</span></td><td><span class="score-box blue">2.3</span></td>
+      <td><span class="score-box purple">44.4</span></td><td><span class="score-box purple">2.3</span></td>
+      <td><span class="score-box purple">44.4</span></td><td><span class="score-box purple">2.3</span></td>
+    </tr> -->
+    <!-- 可继续添加其他模型 -->
+  </tbody>
+</table>
+<script>
+  const table = document.querySelector("table");
+  const tbody = table.querySelector("tbody");
+  const headers = Array.from(table.querySelectorAll("thead th[data-index]"));
+  const colColors = [
+    [255, 200, 200], [200, 255, 200], [255, 240, 200], [210, 210, 255],
+    [245, 210, 245], [180, 180, 180], [180, 240, 240], [240, 255, 200],
+    [220, 220, 255], [255, 255, 200], [255, 210, 210], [200, 255, 200],
+    [220, 255, 255], [255, 240, 180], [235, 235, 235], [200, 200, 255]
+  ];
+
+  let sortState = {};
+
+  function applyGradientColors() {
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const colCount = rows[0].cells.length - 1; // exclude model name
+
+    for (let col = 1; col <= colCount; col++) {
+      const cells = rows.map(r => r.cells[col]);
+      const values = cells.map(c => parseFloat(c.textContent)).filter(v => !isNaN(v));
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      const [r, g, b] = colColors[(col - 1) % colColors.length];
+
+      cells.forEach(cell => {
+        const val = parseFloat(cell.textContent);
+        if (!isNaN(val)) {
+          const norm = (val - min) / (max - min + 1e-6);
+          const alpha = 0.2 + 0.8 * norm;
+          cell.style.backgroundColor = `rgba(${r}, ${g}, ${b}, ${alpha.toFixed(2)})`;
+          cell.style.borderRadius = "6px";
+        }
+      });
+    }
+  }
+
+
+  headers.forEach(th => {
+  const span = document.createElement("span");
+  span.className = "arrow";
+  span.textContent = "▲";          // 默认向上（无实际意义，点击时会更新）
+  th.appendChild(span);
+  });
+
+  // Initial color application
+  applyGradientColors();
+
+  // Add sorting event listeners
+  headers.forEach(th => {
+  const col = +th.dataset.index;
+  th.style.cursor = "pointer";
+
+  th.addEventListener("click", () => {
+    sortState[col] = !(sortState[col] === "asc") ? "asc" : "desc";
+    const asc = sortState[col] === "asc";
+
+    const rows = Array.from(tbody.querySelectorAll("tr")).sort((a, b) => {
+      const va = parseFloat(a.cells[col + 1].textContent) || -Infinity;
+      const vb = parseFloat(b.cells[col + 1].textContent) || -Infinity;
+      return asc ? va - vb : vb - va;
+    });
+    tbody.replaceChildren(...rows);
+
+    headers.forEach(h => {
+      const arrow = h.querySelector(".arrow");
+      if (!arrow) return;
+      if (h === th) {
+        arrow.classList.add("active");
+        arrow.textContent = asc ? "▲" : "▼";
+      } else {
+        arrow.classList.remove("active");
+        arrow.textContent = "▲";
+      }
+    });
+
+    applyGradientColors();
+  });
+});
+</script>
+
+</body>
+</html>
