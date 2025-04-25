@@ -142,9 +142,9 @@ We highlight the following key findings:
   <tr>
     <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="400"></td>
     <td>
-      <img src="./images/8-1.gif" alt="Animation 1" width="400"><br>
-      <img src="./images/8-2.gif" alt="Animation 2" width="400"><br>
-      <img src="./images/8-3.gif" alt="Animation 3" width="400"><br>
+      <img src="./images/8-1.gif" alt="Animation 1" width="410"><br>
+      <img src="./images/8-2.gif" alt="Animation 2" width="410"><br>
+      <img src="./images/8-3.gif" alt="Animation 3" width="410"><br>
       <b>Question</b>: Does the camera move forward during the video?
     </td>
   </tr>
