@@ -160,7 +160,7 @@ We highlight the following key findings:
         <div>
           <img src="./images/8-3.gif" width="405"><br>
           🤔: Does the camera move backward during the video? <br>
-          🤖: ✅  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🙋: ✅
+          🤖: ❌  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🙋: ✅
         </div>
       </div>
     </td>
