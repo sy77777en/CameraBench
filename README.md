@@ -2,11 +2,11 @@
 
 | [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/) | [&#129303;**HuggingFace**](https://huggingface.co/datasets/syCen/CameraBench) | [**📖Paper**](https://arxiv.org/abs/2504.15376) |
 
-## Preview
+## What's New
 
 #### Model: Coming Soon! 🔥
 #### Training Data: Coming Soon! 🔥
-#### Test Data: Released —— 2025.04.25
+#### Test Data: Released 🤗
 
 ## Taxonomy of Camera Motion Primitives
 
