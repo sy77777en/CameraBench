@@ -169,7 +169,39 @@ We highlight the following key findings:
 
 
 
+<table width="80%" align="center" cellspacing="0" cellpadding="0">
+  <tr>
+    <!-- 左侧：Leaderboard 图，占宽度的 50% -->
+    <td width="50%" valign="top" style="padding-right: 1em;">
+      <img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="100%" style="display: block;"/>
+    </td>
 
+    <!-- 右侧：三组问答，各占一行，也占 50% 宽度 -->
+    <td width="50%" valign="top" style="padding-left: 1em;">
+      <div style="margin-bottom: 1.5em;">
+        <img src="./images/8-1.gif" alt="Example 1" width="100%" style="display: block; margin-bottom: .5em;"/>
+        <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+          🤔 Does the camera track the subject from a side view?<br/>
+          🤖 ✅   🙋 ✅
+        </p>
+      </div>
+      <div style="margin-bottom: 1.5em;">
+        <img src="./images/8-2.gif" alt="Example 2" width="100%" style="display: block; margin-bottom: .5em;"/>
+        <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+          🤔 Does the camera only move down during the video?<br/>
+          🤖 ❌   🙋 ✅
+        </p>
+      </div>
+      <div>
+        <img src="./images/8-3.gif" alt="Example 3" width="100%" style="display: block; margin-bottom: .5em;"/>
+        <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+          🤔 Does the camera move backward during the video?<br/>
+          🤖 ❌   🙋 ✅
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
 
 ## Citation
 
