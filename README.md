@@ -2,12 +2,6 @@
 
 | [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/) | [&#129303;**HuggingFace**](https://huggingface.co/datasets/syCen/CameraBench) | [**📖Paper**](https://arxiv.org/abs/2504.15376) |
 
-## What's New
-
-#### Model: Coming Soon! 🔥
-#### Training Data: Coming Soon! 🔥
-#### Test Data: Released 🤗
-
 ## Taxonomy of Camera Motion Primitives
 
 ![Demo GIF](./images/3.gif)
@@ -19,6 +13,43 @@ Here we demonstrate our taxonomy includes three reference frames (object-, groun
 We introduce CameraBench, a large-scale dataset with over 150K binary labels and captions over ~3,000 videos spanning diverse types, genres, POVs, capturing devices, and post-production effects (e.g., nature, films, games, 2D/3D, real/synthetic, GoPro, drone shot, etc.). We showcase example annotations below:
 ![Demo GIF](./images/4.gif)
 
+### News
+
+### **🚀 Quick Start**
+```python
+from video_data import VideoData
+from camera_motion_data import camera_motion_params_demo
+import json
+
+# Create a VideoData object
+video_sample = VideoData()
+
+# 🔹 Initializing cam_motion
+# You can initialize cam_motion with a dictionary of parameters or a CameraMotionData instance
+# However, you should never create a CameraMotionData instance directly without using its create() function.
+
+video_sample.cam_motion = camera_motion_params_demo  # Correct way to set
+
+# 🔹 Displaying camera_motion_params_demo dictionary
+print("camera_motion_params_demo:")
+print(json.dumps(camera_motion_params_demo, indent=4))
+
+# 🔹 Trying to access an uninitialized attribute (this will raise an error)
+print(f"If you try to access cam_setup before setting it, it will raise an Error.")
+try:
+    print(video_sample.cam_setup)
+except AttributeError as e:
+    print(f"AttributeError: {e}")
+```
+
+---
+
+### **🔹 Rules for Initialization**
+✅ You **must use** the `.create()` function for `CameraMotionData`, `CameraSetupData`, and `LightingSetupData`.  
+✅ You **should not** create instances of these classes manually.  
+✅ Uninitialized attributes will **raise an `AttributeError`** when accessed.  
+
+---
 
 # SfMs vs. VLMs on CameraBench
 We highlight the following key findings:
