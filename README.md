@@ -140,31 +140,17 @@ We highlight the following key findings:
 
 <table>
   <tr>
-    <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="40%"></td>
+    <td><img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" width="410"></td>
     <td>
-      <img src="./images/8-1.gif" alt="Animation 1" width="100%"><br>
-      <img src="./images/8-2.gif" alt="Animation 2" width="100%"><br>
-      <img src="./images/8-3.gif" alt="Animation 3" width="100%"><br>
+      <img src="./images/8-1.gif" alt="Animation 1" width="430"><br>
+      <img src="./images/8-2.gif" alt="Animation 2" width="430"><br>
+      <img src="./images/8-3.gif" alt="Animation 3" width="430"><br>
       <b>Question</b>: Does the camera move forward during the video?
     </td>
   </tr>
 </table>
 
-## Visual Demonstrations
 
-<table style="width: 100%; border-collapse: collapse;">
-  <tr>
-    <td style="vertical-align: top; text-align: center; width: 50%;">
-      <img src="./images/VQA-Leaderboard.png" alt="VQA Leaderboard" style="width: 40%; max-width: 400px;">
-    </td>
-    <td style="vertical-align: top; text-align: center; width: 50%;">
-      <img src="./images/8-1.gif" alt="Animation 1" style="width: 100%; max-width: 400px;"><br>
-      <img src="./images/8-2.gif" alt="Animation 2" style="width: 100%; max-width: 400px;"><br>
-      <img src="./images/8-3.gif" alt="Animation 3" style="width: 100%; max-width: 400px;"><br>
-      <b>Question</b>: Does the camera move forward during the video?
-    </td>
-  </tr>
-</table>
 
 
 ## Citation
