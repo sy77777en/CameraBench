@@ -5,14 +5,14 @@
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
 ### News
-- **[2025/04/26]🔥🔥🔥** We release our **LoRA fine-tuned 7B model**, together with our **testset**, consisting of **over 1,000 videos with high quality labels and captions**.
-
+- **[2025/04/26]🔥** We release our **LoRA fine-tuned 7B model**, together with our **testset**, consisting of **over 1,000 videos with high quality labels and captions**.
 - 32B and 72B Models are coming soon.
 
 ### 🌍Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
+- [🚀**Lora Model**](): Download the Lora Finetuned 7B model.
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Project Home Page.
-- [**📖Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
+- [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 
 ## Taxonomy of Camera Motion Primitives
 
