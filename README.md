@@ -6,6 +6,13 @@
 
 | [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/) | [&#129303;**HuggingFace**](https://huggingface.co/datasets/syCen/CameraBench) | [**📖Paper**](https://arxiv.org/abs/2504.15376) |
 
+### News
+#### [2025.04.26]🔥🔥🔥 We release both our LoRA fine-tuned 7B models.
+
+#### [2025.04.24]🔥🔥🔥 We release a test set containing over 1,000 videos, each paired with captions and questions.
+
+#### 32B and 72B Models are coming soon.
+
 ## Taxonomy of Camera Motion Primitives
 
 ![Demo GIF](./images/3.gif)
@@ -16,11 +23,6 @@ Here we demonstrate our taxonomy includes three reference frames (object-, groun
 
 We introduce CameraBench, a large-scale dataset with over 150K binary labels and captions over ~3,000 videos spanning diverse types, genres, POVs, capturing devices, and post-production effects (e.g., nature, films, games, 2D/3D, real/synthetic, GoPro, drone shot, etc.). We showcase example annotations below:
 ![Demo GIF](./images/4.gif)
-
-### News
-[2025.04.26]🔥🔥🔥 We release both our fully fine-tuned and LoRA fine-tuned 7B models.
-[2025.04.24]🔥🔥🔥 We release a test set containing over 1,000 videos, each paired with captions and questions.
-32B and 72B Models are coming soon.
 
 ---
 
