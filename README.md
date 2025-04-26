@@ -23,7 +23,7 @@ We introduce CameraBench, a large-scale dataset with over 150K binary labels and
 
 ---
 
-# SfMs vs. VLMs on CameraBench
+## SfMs vs. VLMs on CameraBench
 We highlight the following key findings:
 
 - Recent learning-based SfM/SLAM methods like [MegaSAM](https://arxiv.org/abs/2412.04463) and [CuT3R](https://cut3r.github.io/) achieve superior performance across most motion primitives, significantly outperforming classic methods like COLMAP. Nonetheless, SfMs are still far from solving this task. We show failure cases of SfM methods below:
