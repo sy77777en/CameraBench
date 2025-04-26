@@ -7,11 +7,9 @@
 | [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/) | [&#129303;**HuggingFace**](https://huggingface.co/datasets/syCen/CameraBench) | [**📖Paper**](https://arxiv.org/abs/2504.15376) |
 
 ### News
-#### [2025.04.26]🔥🔥🔥 We release both our LoRA fine-tuned 7B models.
+- **[2025/04/26]🔥🔥🔥** We release our **LoRA fine-tuned 7B model**, together with our **testset**, consisting of **over 1,000 videos with high quality labels and captions**.
 
-#### [2025.04.24]🔥🔥🔥 We release a test set containing over 1,000 videos, each paired with captions and questions.
-
-#### 32B and 72B Models are coming soon.
+- 32B and 72B Models are coming soon.
 
 ## Taxonomy of Camera Motion Primitives
 
