@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://github.com/sy77777en/CameraBench/raw/main/images/demo.gif" width="600">
-</p>
-
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
 ### News
