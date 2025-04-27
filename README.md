@@ -4,8 +4,6 @@
 
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
-# CameraBench
-
 [![arXiv 2504.15376](https://img.shields.io/badge/arXiv-2504.15376-b31b1b.svg?logo=arxiv&logoColor=white&style=flat-square)](https://arxiv.org/abs/2504.15376)
 [![](https://img.shields.io/badge/%F0%9F%8F%A0%20_Homepage-4285F4?color=4285F4&logoColor=white)](https://linzhiqiu.github.io/papers/camerabench/)
 [![](https://img.shields.io/badge/%F0%9F%A4%97%20_CameraBench_testset-FF9B00?color=FF9B00&logoColor=white)](https://huggingface.co/datasets/syCen/CameraBench)
