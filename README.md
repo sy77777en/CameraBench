@@ -20,7 +20,7 @@
 
 ## SfMs vs. VLMs on CameraBench
 > Generative VLMs (evaluated with [VQAScore](https://linzhiqiu.github.io/papers/vqascore/)) trail classical SfM/SLAM in pure geometry, yet they outperform discriminative VLMs that rely on CLIPScore/ITMScore and—even better—capture scene‑aware semantic cues missed by SfM.
-> After simple supervised fine‑tuning (SFT) on ≈1 400 extra annotated clips, our 7B Qwen2.5‑VL doubles its AP, matching the current best MegaSAM.
+> After simple supervised fine‑tuning (SFT) on ≈1 400 extra annotated clips, our 7B Qwen2.5‑VL doubles its AP, outperforming the current best MegaSAM.
 
 ![Demo GIF](./images/sfm_vs_vlm.jpg)
 
