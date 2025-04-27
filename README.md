@@ -53,11 +53,16 @@
   </tr>
 </table>
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Download test videos
 ```python
 python download_test_videos.py --save_dir ./your_target_folder
+```
+
+### Download corresponding captions and labels (part)
+```python
+python download_test_data.py --save_dir ./your_target_folder
 ```
 
 ### Download finetuned model
