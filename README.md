@@ -5,7 +5,8 @@
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
 ### News
-- **[2025/04/26]🔥** We release our **fine-tuned 7B model**, together with our **testset**, consisting of **over 1,000 videos with high quality labels and captions**.
+- **[2025/04/26]🔥** We release our **fine-tuned 7B model**, together with our **testset videos**, consisting of **over 1,000 videos with high quality labels and captions**.
+- we are integrating CameraBench into LLMs-eval. Stay tuned!
 - 32B and 72B Models are coming soon.
 
 ### 🌍Explore More
