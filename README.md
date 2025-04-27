@@ -5,7 +5,7 @@
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
 <a href="https://arxiv.org/abs/2504.15376">
-    <img src="https://img.shields.io/badge/arXiv-2504.15376.svg" alt="arXiv">
+  <img src="https://img.shields.io/badge/arXiv-2504.15376-b31b1b.svg" alt="arXiv">
 </a>
 <a href="https://linzhiqiu.github.io/papers/camerabench/">
   <img src="https://img.shields.io/badge/homepage-MyProject-blue.svg" alt="Homepage">
