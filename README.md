@@ -4,6 +4,18 @@
 
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
+<a href="https://arxiv.org/abs/2504.15376">
+    <img src="https://img.shields.io/badge/arXiv-2504.15376.svg" alt="arXiv">
+</a>
+<a href="https://linzhiqiu.github.io/papers/camerabench/">
+  <img src="https://img.shields.io/badge/homepage-MyProject-blue.svg" alt="Homepage">
+</a>
+<a href="https://huggingface.co/datasets/syCen/CameraBench">
+  <img src="https://img.shields.io/badge/huggingface--testset-owner%2Fdataset-orange.svg?logo=huggingface" alt="HuggingFace Testset">
+</a>
+
+
+
 ### News
 - **[2025/04/26]🔥** We open‑sourced our **fine‑tuned 7B model** and the public **test set**—1 000+ videos with expert labels & captions..
 - **LLMs‑eval** integration is in progress—stay tuned!
