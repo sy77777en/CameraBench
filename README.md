@@ -4,15 +4,9 @@
 
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
-<a href="https://arxiv.org/abs/2504.15376">
-  <img src="https://img.shields.io/badge/arXiv-2504.15376-b31b1b.svg" alt="arXiv">
-</a>
-<a href="https://linzhiqiu.github.io/papers/camerabench/">
-  <img src="https://img.shields.io/badge/homepage-MyProject-blue.svg" alt="Homepage">
-</a>
-<a href="https://huggingface.co/datasets/syCen/CameraBench">
-  <img src="https://img.shields.io/badge/huggingface--testset-owner%2Fdataset-orange.svg?logo=huggingface" alt="HuggingFace Testset">
-</a>
+[![arXiv](https://img.shields.io/badge/arXiv_2504.15376-b31b1b.svg?style=for-the-badge&logo=arxiv)](https://arxiv.org/abs/2504.15376)
+[![Website](https://img.shields.io/badge/Website-CameraBench-4285F4.svg?style=for-the-badge&logo=github)](https://linzhiqiu.github.io/papers/camerabench/)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-CameraBench-FF9900.svg?style=for-the-badge&logo=huggingface)](https://huggingface.co/datasets/syCen/CameraBench)
 
 
 
