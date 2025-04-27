@@ -12,14 +12,12 @@
 > Generative VLMs (evaluated with [VQAScore](https://linzhiqiu.github.io/papers/vqascore/)) trail classical SfM/SLAM in pure geometry, yet they outperform discriminative VLMs that rely on CLIPScore/ITMScore and—even better—capture scene‑aware semantic cues missed by SfM.
 > After simple supervised fine‑tuning (SFT) on ≈1 400 extra annotated clips, our 7B Qwen2.5‑VL doubles its AP, outperforming the current best MegaSAM.
 
----
-
-### News
+## News
 - **[2025/04/26]🔥** We open‑sourced our **fine‑tuned 7B model** and the public **test set**—1 000+ videos with expert labels & captions..
 - **LLMs‑eval** integration is in progress—stay tuned!
 - 32B & 72B checkpoints are on the way.
 
-### 🌍Explore More
+## 🌍Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
 - [🚀**Fine-tuned Model**](): Access model checkpoints.
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Demos & docs.
