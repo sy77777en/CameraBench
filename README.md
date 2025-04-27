@@ -10,7 +10,7 @@
 
 ### 🌍Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
-- [🚀**Lora Model**](): Download the Lora Finetuned 7B model.
+- [🚀**Lora Model**](): Access model checkpoints.
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Project Home Page.
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 - [📈**Leaderboard**](): LeaderBoard.
