@@ -5,9 +5,9 @@
 ## 📷 **CameraBench: Towards Understanding Camera Motions in Any Video**  
 
 ### News
-- **[2025/04/26]🔥** We release our **fine-tuned 7B model**, together with our **testset videos**, consisting of **over 1,000 videos with high quality labels and captions**.
-- we are integrating CameraBench into **LLMs-eval**. Stay tuned!
-- 32B and 72B Models are coming soon.
+- **[2025/04/26]🔥** We open‑sourced our **fine‑tuned 7B model** and the public **test set**—1 000+ videos with expert labels & captions..
+- **LLMs‑eval** integration is in progress—stay tuned!
+- 32B & 72B checkpoints are on the way.
 
 ### 🌍Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
