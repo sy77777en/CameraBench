@@ -11,7 +11,7 @@
 
 ### 🌍Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
-- [🚀**Lora Model**](): Access model checkpoints.
+- [🚀**Fine-tuned Model**](): Access model checkpoints.
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Project Home Page.
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 - [📈**Leaderboard**](): LeaderBoard.
@@ -19,7 +19,8 @@
 ---
 
 ## SfMs vs. VLMs on CameraBench
-- Although generative VLMs (evaluated using [VQAScore](https://linzhiqiu.github.io/papers/vqascore/)) are weaker than SfM/SLAM, they generally outperform discriminative VLMs that use CLIPScore/ITMScore. Furthermore, they are able to capture the **semantic primitives** that depend on scene content, while SfMs struggle to do so. Motivated by this, we apply supervised fine-tuning (SFT) to a generative VLM (Qwen2.5-VL) on a separately annotated training set of ~1400 videos. We show that simple SFT on small-scale (yet high-quality) data significantly boosts performance by 1-2x, making it match the SOTA MegaSAM in overall AP.
+> Generative VLMs (evaluated with [VQAScore](https://linzhiqiu.github.io/papers/vqascore/)) trail classical SfM/SLAM in pure geometry, yet they outperform discriminative VLMs that rely on CLIPScore/ITMScore and—even better—capture scene‑aware semantic cues missed by SfM.
+> After simple supervised fine‑tuning (SFT) on ≈1 400 extra annotated clips, our 7 B Qwen2.5‑VL doubles its AP, matching the current best MegaSAM.
 ![Demo GIF](./images/sfm_vs_vlm.jpg)
 
 ## VQA evaluation on VLMs
