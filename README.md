@@ -53,6 +53,16 @@
   </tr>
 </table>
 
+## Quick Start
+
+### Download test videos
+```python
+python download_test_videos.py --save_dir ./your_target_folder
+```
+
+### Download finetuned model
+```python
+```
 
 ## Citation
 
