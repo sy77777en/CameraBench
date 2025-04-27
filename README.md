@@ -22,7 +22,7 @@
 - [🚀**Fine-tuned Model**](): Access model checkpoints.
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Demos & docs.
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
-- [📈**Leaderboard**](): LeaderBoard.
+- [📈**Leaderboard**](https://sy77777en.github.io/CameraBench/leaderboard/table.html): Explore the full leaderboard..
 
 
 ## VQA evaluation on VLMs
