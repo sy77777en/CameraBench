@@ -62,13 +62,14 @@
 python download_test_videos.py --save_dir ./your_target_folder
 ```
 
-### Download corresponding captions and labels (part)
+### Get captions & labels (subset)
 ```python
 python download_test_data.py --save_dir ./your_target_folder
 ```
 
 ### Download finetuned model
 ```python
+# Coming soon – placeholder
 ```
 
 ## Citation
