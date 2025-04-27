@@ -8,7 +8,7 @@
 [![](https://img.shields.io/badge/%F0%9F%8F%A0%20_Homepage-4285F4?color=4285F4&logoColor=white)](https://linzhiqiu.github.io/papers/camerabench/)
 [![](https://img.shields.io/badge/%F0%9F%A4%97%20_CameraBench_testset-FF9B00?color=FF9B00&logoColor=white)](https://huggingface.co/datasets/syCen/CameraBench)
 
-![Demo GIF](./images/sfm_vs_vlm.jpg)
+![Demo GIF](./images/sfm_vs_vlm1.jpg)
 > Generative VLMs (evaluated with [VQAScore](https://linzhiqiu.github.io/papers/vqascore/)) trail classical SfM/SLAM in pure geometry, yet they outperform discriminative VLMs that rely on CLIPScore/ITMScore and—even better—capture scene‑aware semantic cues missed by SfM.
 > After simple supervised fine‑tuning (SFT) on ≈1 400 extra annotated clips, our 7B Qwen2.5‑VL doubles its AP, outperforming the current best MegaSAM.
 
