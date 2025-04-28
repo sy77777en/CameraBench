@@ -13,13 +13,13 @@
 > After simple supervised fine‑tuning (SFT) on ≈1,400 extra annotated clips, our 7B Qwen2.5‑VL doubles its AP, outperforming the current best MegaSAM.
 
 ## 📰 News
-- **[2025/04/26]🔥** We open‑sourced our **fine‑tuned 7B model** and the public **test set**—1 000+ videos with expert labels & captions..
+- **[2025/04/26]🔥** We open‑sourced our **fine‑tuned 7B model** and the public **test set**—1 000+ videos with expert labels & captions. Stay tuned for stronger models in the future!
 - **LLMs‑eval** integration is in progress—stay tuned!
 - 32B & 72B checkpoints are on the way.
 
 ## 🌍 Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
-- [🚀**Fine-tuned Model**](): Access model checkpoints.
+- [🚀**Fine-tuned Model**](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion-preview): Access model checkpoints.
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Demos & docs.
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 - [📈**Leaderboard**](https://sy77777en.github.io/CameraBench/leaderboard/table.html): Explore the full leaderboard..
