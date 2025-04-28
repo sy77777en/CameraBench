@@ -70,7 +70,7 @@ python download_test_data.py --save_dir ./your_target_folder
 
 ### Download finetuned model
 ```python
-# Coming soon – placeholder
+# Coming soon
 ```
 
 ## ✏️ Citation
