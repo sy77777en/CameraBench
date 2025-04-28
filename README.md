@@ -77,7 +77,7 @@ python download_test_data.py --save_dir ./your_target_folder
 
 If you find this repository useful for your research, please use the following.
 ```
-@article{lin2025towards,
+@article{lin2025camerabench,
   title={Towards Understanding Camera Motions in Any Video},
   author={Lin, Zhiqiu and Cen, Siyuan and Jiang, Daniel and Karhade, Jay and Wang, Hewei and Mitra, Chancharik and Ling, Tiffany and Huang, Yuhan and Liu, Sifan and Chen, Mingyu and Zawar, Rushikesh and Bai, Xue and Du, Yilun and Gan, Chuang and Ramanan, Deva},
   journal={arXiv preprint arXiv:2504.15376},
