@@ -25,7 +25,7 @@
 - [📈**Leaderboard**](https://sy77777en.github.io/CameraBench/leaderboard/table.html): Explore the full leaderboard..
 
 
-## VQA evaluation on VLMs
+## 🔎 VQA evaluation on VLMs
 
 <table>
   <tr>
