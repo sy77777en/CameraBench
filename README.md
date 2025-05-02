@@ -88,7 +88,7 @@ processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
 
 # Prepare input data
 video_path = "file:///path/to/video1.mp4"
-text_description = "a person dancing"
+text_description = "the camera tilting upward"
 question = f"Does this video show \"{text_description}\"?"
 
 # Format the input for the model
@@ -176,7 +176,7 @@ messages = [
                 "video": "file:///path/to/video1.mp4",
                 "fps": 8.0,
             },
-            {"type": "text", "text": "Describe this video."},
+            {"type": "text", "text": "Describe the camera motion in this video."},
         ],
     }
 ]
