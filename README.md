@@ -66,7 +66,7 @@ python download_test_videos.py --save_dir ./your_target_folder
 
 ### Get captions & labels (subset)
 ```python
-python download_test_data.py --save_dir ./your_target_folder
+python download_test_file.py --save_dir ./your_target_folder
 ```
 
 ### Use the finetuned model
