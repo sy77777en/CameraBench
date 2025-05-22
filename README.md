@@ -20,7 +20,7 @@
 
 ## 🌍 Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
-- [🚀**Fine-tuned Model**](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion-preview): Access model checkpoints!
+- 🚀**Fine-tuned Models** ([7B param](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion-preview), [32B param](https://huggingface.co/chancharikm/qwen2.5-vl-32b-cam-motion-preview), [72B param](https://huggingface.co/chancharikm/qwen2.5-vl-72b-cam-motion-preview)): Access model checkpoints on HuggingFace!
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Demos & docs.
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 - [📈**Leaderboard**](https://sy77777en.github.io/CameraBench/leaderboard/table.html): Explore the full leaderboard..
@@ -71,7 +71,7 @@ python download_test_file.py --save_dir ./your_target_folder
 
 ### Use the finetuned model
 
-We have released a preview version of our finetuned Qwen2.5-VL-7B model (which achieves SOTA performance on CameraBench!) on [HuggingFace](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion-preview). The model is specialized for doing camerm motion primitive classification and video-text retrieval for camera-motion captions. The usage is identical to a [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) model. A quick demo is shown below:
+We have released a preview version of our finetuned Qwen2.5-VL-7B model (which achieves SOTA performance on CameraBench!) on HuggingFace ([7B param](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion-preview), [32B param](https://huggingface.co/chancharikm/qwen2.5-vl-32b-cam-motion-preview), [72B param](https://huggingface.co/chancharikm/qwen2.5-vl-72b-cam-motion-preview)). The model is specialized for doing camerm motion primitive classification and video-text retrieval for camera-motion captions. The usage is identical to a [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) model. A quick demo is shown below:
 <details>
 <summary>Generative Scoring (for classification and retrieval):</summary>
   
