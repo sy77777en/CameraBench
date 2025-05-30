@@ -33,7 +33,7 @@
   <tr>
     <td>
     <div style="display: flex; flex-direction: column; gap: 1em;">
-      <img src="./images/VQA-Leaderboard.png" width="440">
+      <img src="./images/VQA-leaderboard.png" width="440">
      </div>
     </td>
     <td>
