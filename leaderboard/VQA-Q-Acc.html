@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VQA Evaluation Leaderboard - Overall Q-Acc</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 12px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 12px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .description {
+            max-width: 600px;
+            margin: 0 auto 12px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .leaderboard {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .entry {
+            display: grid;
+            grid-template-columns: 32px 1fr;
+            gap: 8px;
+            padding: 5px 4px;
+            border-bottom: 1px solid #f1f5f9;
+            align-items: center;
+        }
+
+        .rank-box {
+            width: 28px;
+            height: 28px;
+            background-color: #f3f4f6;
+            color: #1f2937;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0 auto;
+        }
+
+        .rank-box.random-chance {
+            background-color: #cbd5e1;
+            color: #1f2937;
+        }
+
+        .rank-1 {
+            background-color: #fbbf24;
+            color: #333;
+        }
+
+        .rank-2 {
+            background-color: #94a3b8;
+            color: white;
+        }
+
+        .rank-3 {
+            background-color: #b45309;
+            color: white;
+        }
+
+        .model-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .model-name {
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 2px;
+        }
+
+        .score-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .bar-container {
+            flex-grow: 1;
+            height: 5px;
+            background: #f1f5f9;
+            border-radius: 2.5px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 100%;
+            border-radius: 2.5px;
+            transition: width 0.3s ease;
+        }
+
+        /* Slower blue gradient from dark to medium-dark */
+        .rank-1-bar {
+            background-color: #1d4ed8;
+        }
+
+        /* Dark blue */
+        .rank-2-bar {
+            background-color: #2357e0;
+        }
+
+        .rank-3-bar {
+            background-color: #2960e8;
+        }
+
+        .rank-4-bar {
+            background-color: #2f69f0;
+        }
+
+        .rank-5-bar {
+            background-color: #3572f8;
+        }
+
+        .rank-6-bar {
+            background-color: #3b82f6;
+        }
+
+        /* Medium blue */
+        .rank-7-bar {
+            background-color: #4b8df7;
+        }
+
+        .rank-8-bar {
+            background-color: #5b98f8;
+        }
+
+        .rank-9-bar {
+            background-color: #6ba3f9;
+        }
+
+        .rank-10-bar {
+            background-color: #7baefa;
+        }
+
+        .rank-11-bar {
+            background-color: #8bb9fb;
+        }
+
+        .rank-12-bar {
+            background-color: #9bc4fc;
+        }
+
+        .rank-13-bar {
+            background-color: #abcffd;
+        }
+
+        .rank-14-bar {
+            background-color: #bbdafe;
+        }
+
+        .rank-15-bar {
+            background-color: #cbe5ff;
+        }
+
+        /* Still a visible blue */
+        .Random {
+            background-color: #cbd5e1;
+        }
+
+        /* Unchanged for Random Chance */
+
+        .score-value {
+            font-size: 13px;
+            font-weight: 600;
+            min-width: 28px;
+            text-align: right;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .note {
+            margin-top: 8px;
+            font-size: 12px;
+            color: #64748b;
+            text-align: center;
+        }
+
+        .random-chance .model-name,
+        .random-chance .score-value {
+            color: #9ca3af;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>VQA evaluation on VLMs</h1>
+    <!-- <p class="description">
+        Question Accuracy (Q-Acc) scores a point only if both videos are answered correctly for a given question.
+        This leaderboard shows the Average Overall Q-Acc across all VQA tasks.
+    </p> -->
+
+    <div class="leaderboard">
+        <!-- Qwen2.5-VL-7B (SFT) -->
+        <div class="entry">
+            <div>
+                <div class="rank-box rank-1">1</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Qwen2.5-VL-7B (SFT)</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-1-bar" style="width: 75.625%"></div> <!-- 60.5 / 80 * 100 -->
+                    </div>
+                    <span class="score-value highlight">60.5</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Qwen2.5-VL-72B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box rank-2">2</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Qwen2.5-VL-72B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-2-bar" style="width: 50.875%"></div> <!-- 40.7 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">40.7</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Qwen2.5-VL-32B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box rank-3">3</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Qwen2.5-VL-32B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-3-bar" style="width: 47.75%"></div> <!-- 38.2 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">38.2</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GPT-4o -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">4</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">GPT-4o</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-4-bar" style="width: 37.25%"></div> <!-- 29.8 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">29.8</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gemini-2.5-Pro -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">5</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Gemini-2.5-Pro</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-5-bar" style="width: 35.25%"></div> <!-- 28.2 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">28.2</span>
+                </div>
+            </div>
+        </div>
+        <!-- mPLUG-Owl3-7B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">6</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">mPLUG-Owl3-7B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-6-bar" style="width: 31.75%"></div> <!-- 25.4 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">25.4</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Random Chance -->
+        <div class="entry random-chance">
+            <div>
+                <div class="rank-box random-chance">-</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Random Chance</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar Random" style="width: 31.25%"></div> <!-- 25.0 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">25.0</span>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- Gemini-2-Flash -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">7</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Gemini-2-Flash</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-7-bar" style="width: 31.125%"></div> <!-- 24.9 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">24.9</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- LLaVA-OneVision-7B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">8</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">LLaVA-OneVision-7B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-8-bar" style="width: 30.875%"></div> <!-- 24.7 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">24.7</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- LLaVA-Video-7B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">9</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">LLaVA-Video-7B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-9-bar" style="width: 30.125%"></div> <!-- 24.1 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">24.1</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Qwen2.5-VL-7B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">10</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Qwen2.5-VL-7B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-10-bar" style="width: 27.875%"></div> <!-- 22.3 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">22.3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- InternVL2.5-26B / InternVL3-26B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">11</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">InternVL2.5-26B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-11-bar" style="width: 24.75%"></div> <!-- 19.8 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">19.8</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- InternVL2.5-8B / InternVL3-8B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">12</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">InternVL2.5-8B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-12-bar" style="width: 20.875%"></div> <!-- 16.7 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">16.7</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- InternLMXComposer2.5-7B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">13</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">InternLMXComposer2.5-7B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-13-bar" style="width: 11.625%"></div> <!-- 9.3 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">9.3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- InternVideo2-Chat-8B -->
+        <div class="entry">
+            <div>
+                <div class="rank-box">14</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">InternVideo2-Chat-8B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-14-bar" style="width: 6.625%"></div> <!-- 5.3 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">5.3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarsier-Recap-7B -->
+        <div class="entry" style="border-bottom: none;">
+            <div>
+                <div class="rank-box">15</div>
+            </div>
+            <div class="model-info">
+                <div class="model-name">Tarsier-Recap-7B</div>
+                <div class="score-container">
+                    <div class="bar-container">
+                        <div class="bar rank-15-bar" style="width: 6.0%"></div> <!-- 4.8 / 80 * 100 -->
+                    </div>
+                    <span class="score-value">4.8</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="note">
+        <p>Note: Random chance baseline is 25.0%. Q-Acc (Question Accuracy) scores a point only if both videos are
+            answered correctly for a given question.</p>
+    </div> -->
+</body>
+
+</html>
