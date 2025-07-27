@@ -26,6 +26,8 @@
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 - [📈**Leaderboard**](https://sy77777en.github.io/CameraBench/leaderboard/table.html): Explore the full leaderboard..
 
+## ⚠️ Note
+- If you are interested in accessing the dataset (including both training and testing splits), please contact us at siyuancen096@gmail.com.
 
 ## 🔎 VQA evaluation on VLMs
 
