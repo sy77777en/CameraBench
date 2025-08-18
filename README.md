@@ -78,6 +78,25 @@ We have released a preview version of our finetuned Qwen2.5-VL-7B model (which a
 <details>
 <summary>Generative Scoring (for classification and retrieval):</summary>
   
+We have two ways of using our model for this application. The first is the recommended `t2v_metrics` approach which we recommend. The latter is a back-up approach directly using Qwen2.5-VL's inference demo.
+
+1. `t2v_metrics` Approach
+```python
+# Install the package using: pip install git+https://github.com/chancharikmitra/t2v_metrics.git
+
+import t2v_metrics
+
+### For a single (video, text) pair:
+qwen_score = t2v_metrics.VQAScore(model='qwen2.5-vl-7b', checkpoint='chancharikm/qwen2.5-vl-7b-cam-motion-preview') 
+video = "videos/baby.mp4" # a video path in string format
+text = "a baby crying"
+# Calculate probability of "Yes" response
+score = qwen_score(images=[video], texts=[text])
+``` 
+For more details, please refer to the t2v_metrics [fork](https://github.com/chancharikmitra/t2v_metrics.git).
+
+2. Qwen2.5-VL Inference Code Approach
+  
 ```python
 # Import necessary libraries
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
@@ -148,6 +167,26 @@ print(f"Score: {score:.4f}")
 
 <details>
 <summary>Natural Language Generation</summary>
+
+We have two ways of using our model for this application. The first is the recommended `t2v_metrics` approach which we recommend. The latter is a back-up approach directly using Qwen2.5-VL's inference demo.
+
+1. `t2v_metrics` Approach
+
+```python
+# Install the package using: pip install git+https://github.com/chancharikmitra/t2v_metrics.git
+
+import t2v_metrics
+
+### For a single (video, text) pair:
+qwen_score = t2v_metrics.VQAScore(model='qwen2.5-vl-7b', checkpoint='chancharikm/qwen2.5-vl-7b-cam-motion-preview') 
+video = "videos/baby.mp4" # a video path in string format
+text =  "Please describe this image: "
+# Calculate probability of "Yes" response
+score = qwen_score.model.generate(images=[video], texts=[text])
+``` 
+For more details, please refer to the t2v_metrics [fork](https://github.com/chancharikmitra/t2v_metrics.git).
+
+2. Qwen2.5-VL Inference Code Approach
   
 ```python
 # The model is trained on 8.0 FPS which we recommend for optimal inference
