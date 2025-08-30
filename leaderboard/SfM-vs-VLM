@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SfMs and VLMs Performance on CameraBench</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <h1>SfMs and VLMs performance on CameraBench</h1>
+        <canvas id="performanceChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('performanceChart').getContext('2d');
+        
+        const data = {
+            labels: [
+                'InternLMX\nComposer\n2.5-7B',
+                'mPLUG-\nOwl3-7B', 
+                'Tarsier-\nRecap-7B',
+                'InternVideo2-\nChat-8B',
+                'LLaVA-OV-\n7B',
+                'LLaVA-\nVideo-7B',
+                'COLMAP',
+                'InternVL2.5-\n8B',
+                'Qwen2.5-\nVL-7B',
+                'InternVL2.5-\n26B',
+                'GPT-4o',
+                'DUSt3R',
+                'VGGSFM',
+                'CUT3R',
+                'MASt3R',
+                'MegaSAM',
+                'Qwen-2.5-VL-7B\n(Ours SFT)'
+            ],
+            datasets: [{
+                label: 'Average AP (%)',
+                data: [16.5, 20.8, 21.0, 22.0, 22.2, 25.6, 27.3, 29.5, 35.8, 29.8, 36.4, 37.0, 41.3, 42.7, 43.1, 50.1, 60.0],
+                backgroundColor: [
+                    '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', // VLMs - light blue
+                    '#F4A460', // COLMAP - orange/tan
+                    '#87CEEB', '#87CEEB', '#87CEEB', // More VLMs
+                    '#F4A460', '#F4A460', '#F4A460', '#F4A460', '#F4A460', // SfM/SLAM - orange/tan
+                    '#F4A460', // MegaSAM - orange/tan (SfM/SLAM)
+                    '#90EE90' // SFT model - mint green
+                ],
+                borderColor: [
+                    '#4682B4', '#4682B4', '#4682B4', '#4682B4', '#4682B4', '#4682B4',
+                    '#CD853F',
+                    '#4682B4', '#4682B4', '#4682B4',
+                    '#CD853F', '#CD853F', '#CD853F', '#CD853F', '#CD853F',
+                    '#CD853F', // MegaSAM border
+                    '#32CD32' // SFT model border
+                ],
+                borderWidth: 2
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 2.5,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 70,
+                        title: {
+                            display: true,
+                            text: 'Average AP (%)',
+                            font: {
+                                size: 14,
+                                weight: 'bold'
+                            }
+                        },
+                        ticks: {
+                            stepSize: 10,
+                            font: {
+                                size: 12
+                            }
+                        },
+                        grid: {
+                            color: '#e0e0e0'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 0,
+                            font: {
+                                size: 10
+                            }
+                        },
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top',
+                        labels: {
+                            usePointStyle: true,
+                            generateLabels: function(chart) {
+                                return [
+                                    {
+                                        text: 'SfM/SLAM',
+                                        fillStyle: '#F4A460',
+                                        strokeStyle: '#CD853F',
+                                        pointStyle: 'rect'
+                                    },
+                                    {
+                                        text: 'VLMs',
+                                        fillStyle: '#87CEEB',
+                                        strokeStyle: '#4682B4',
+                                        pointStyle: 'rect'
+                                    },
+                                    {
+                                        text: 'Qwen-2.5-VL-7B (Ours SFT)',
+                                        fillStyle: '#90EE90',
+                                        strokeStyle: '#32CD32',
+                                        pointStyle: 'rect'
+                                    }
+                                ];
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y + '%';
+                            }
+                        }
+                    }
+                },
+                layout: {
+                    padding: {
+                        top: 20,
+                        bottom: 20
+                    }
+                },
+                animation: {
+                    duration: 1500,
+                    easing: 'easeOutQuart'
+                }
+            },
+            plugins: [{
+                afterDatasetsDraw: function(chart) {
+                    const ctx = chart.ctx;
+                    chart.data.datasets.forEach((dataset, i) => {
+                        const meta = chart.getDatasetMeta(i);
+                        meta.data.forEach((bar, index) => {
+                            const data = dataset.data[index];
+                            ctx.fillStyle = '#333';
+                            ctx.font = 'bold 11px Arial';
+                            ctx.textAlign = 'center';
+                            ctx.textBaseline = 'bottom';
+                            ctx.fillText(data, bar.x, bar.y - 5);
+                        });
+                    });
+                }
+            }]
+        };
+
+        new Chart(ctx, config);
+    </script>
+</body>
+</html>
