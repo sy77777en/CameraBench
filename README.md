@@ -28,8 +28,13 @@
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 - [📈**Leaderboard**](https://sy77777en.github.io/CameraBench/leaderboard/table.html): Explore the full leaderboard..
 
-## ⚠️ Note
-- If you are interested in accessing the dataset (including both training and testing splits), please contact us at siyuancen096@gmail.com.
+## ❓ How to Access / Evaluate on CameraBench
+1. Evaluation Code:
+   Use our official codebase for camera motion classification, VQA, and captioning tasks:
+   🔗[https://github.com/linzhiqiu/t2v\_metrics/tree/main/camerabench](https://github.com/linzhiqiu/t2v_metrics/tree/main/camerabench)
+3. Training Dataset Access:
+   To request access to the training dataset, please complete this form with all relevant details. Providing thorough information will help us process your request more efficiently and reduce unnecessary back-and-forth by email::
+   👉 [https://forms.gle/26LB1rouSZsR29Cx9](https://forms.gle/26LB1rouSZsR29Cx9)
 
 ## 🔎 VQA evaluation on VLMs
 
