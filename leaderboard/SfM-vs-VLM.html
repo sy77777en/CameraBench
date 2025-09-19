@@ -13,7 +13,7 @@
         }
         .chart-container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             padding: 20px;
@@ -37,43 +37,43 @@
     <script>
         const ctx = document.getElementById('performanceChart').getContext('2d');
         
+        const modelNames = [
+            'InternLMX\nComposer\n2.5-7B',
+            'mPLUG-\nOwl3-7B', 
+            'Tarsier-\nRecap-7B',
+            'InternVideo2-\nChat-8B',
+            'LLaVA-OV-\n7B',
+            'LLaVA-\nVideo-7B',
+            'COLMAP',
+            'InternVL2.5-\n8B',
+            'InternVL2.5-\n26B',
+            'Qwen2.5-\nVL-7B',
+            'GPT-4o',
+            'DUSt3R',
+            'VGGSFM',
+            'CUT3R',
+            'MASt3R',
+            'MegaSAM',
+            'Qwen-2.5-VL-7B\n(Ours SFT)'
+        ];
+        
         const data = {
-            labels: [
-                'InternLMX\nComposer\n2.5-7B',
-                'mPLUG-\nOwl3-7B', 
-                'Tarsier-\nRecap-7B',
-                'InternVideo2-\nChat-8B',
-                'LLaVA-OV-\n7B',
-                'LLaVA-\nVideo-7B',
-                'COLMAP',
-                'InternVL2.5-\n8B',
-                'InternVL2.5-\n26B',
-                'Qwen2.5-\nVL-7B',
-                'GPT-4o',
-                'DUSt3R',
-                'VGGSFM',
-                'CUT3R',
-                'MASt3R',
-                'MegaSAM',
-                'Qwen-2.5-VL-7B\n(Ours SFT)'
-            ],
+            labels: modelNames,
             datasets: [{
                 label: 'Average AP (%)',
                 data: [16.5, 20.8, 21.0, 22.0, 22.2, 25.6, 27.3, 29.5, 29.8, 35.8, 36.4, 37.0, 41.3, 42.7, 43.1, 50.1, 60.0],
                 backgroundColor: [
                     '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', // VLMs - light blue
                     '#F4A460', // COLMAP - orange/tan
-                    '#87CEEB', '#87CEEB', '#87CEEB', // More VLMs
+                    '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', // More VLMs (包括GPT-4o)
                     '#F4A460', '#F4A460', '#F4A460', '#F4A460', '#F4A460', // SfM/SLAM - orange/tan
-                    '#F4A460', // MegaSAM - orange/tan (SfM/SLAM)
                     '#90EE90' // SFT model - mint green
                 ],
                 borderColor: [
                     '#4682B4', '#4682B4', '#4682B4', '#4682B4', '#4682B4', '#4682B4',
                     '#CD853F',
-                    '#4682B4', '#4682B4', '#4682B4',
+                    '#4682B4', '#4682B4', '#4682B4', '#4682B4', // More VLMs (包括GPT-4o)
                     '#CD853F', '#CD853F', '#CD853F', '#CD853F', '#CD853F',
-                    '#CD853F', // MegaSAM border
                     '#32CD32' // SFT model border
                 ],
                 borderWidth: 2
@@ -86,11 +86,11 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
-                aspectRatio: 2.5,
+                aspectRatio: 1.8,
                 scales: {
                     y: {
                         beginAtZero: true,
-                        max: 70,
+                        max: 80,
                         title: {
                             display: true,
                             text: 'Average AP (%)',
@@ -111,9 +111,10 @@
                     },
                     x: {
                         ticks: {
-                            maxRotation: 0,
+                            maxRotation: 45,
+                            minRotation: 45,
                             font: {
-                                size: 10
+                                size: 9
                             }
                         },
                         grid: {
@@ -153,6 +154,9 @@
                     },
                     tooltip: {
                         callbacks: {
+                            title: function(context) {
+                                return modelNames[context[0].dataIndex];
+                            },
                             label: function(context) {
                                 return context.dataset.label + ': ' + context.parsed.y + '%';
                             }
@@ -162,7 +166,7 @@
                 layout: {
                     padding: {
                         top: 20,
-                        bottom: 20
+                        bottom: 60 // 为斜着的标签留出空间
                     }
                 },
                 animation: {
@@ -177,6 +181,8 @@
                         const meta = chart.getDatasetMeta(i);
                         meta.data.forEach((bar, index) => {
                             const data = dataset.data[index];
+                            
+                            // 在柱状图顶部显示数值
                             ctx.fillStyle = '#333';
                             ctx.font = 'bold 11px Arial';
                             ctx.textAlign = 'center';
