@@ -23,7 +23,7 @@
 
 ## 🌍 Explore More
 - [🤗**CameraBench Testset**](https://huggingface.co/datasets/syCen/CameraBench): Download the testset.
-- 🚀**Fine-tuned Models** ([7B param](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion-preview), [32B param](https://huggingface.co/chancharikm/qwen2.5-vl-32b-cam-motion-preview), [72B param](https://huggingface.co/chancharikm/qwen2.5-vl-72b-cam-motion-preview)): Access model checkpoints on HuggingFace!
+- 🚀**Fine-tuned Models** ([7B param](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion), [32B param](https://huggingface.co/chancharikm/qwen2.5-vl-32b-cam-motion), [72B param](https://huggingface.co/chancharikm/qwen2.5-vl-72b-cam-motion)): Access model checkpoints on HuggingFace!
 - [🏠**Home Page**](https://linzhiqiu.github.io/papers/camerabench/): Demos & docs.
 - [📖**Paper**](https://arxiv.org/abs/2504.15376): Detailed information about CameraBench.
 - [📈**Leaderboard**](https://sy77777en.github.io/CameraBench/leaderboard/table.html): Explore the full leaderboard..
@@ -81,7 +81,7 @@ python download_test_file.py --save_dir ./your_target_folder
 
 ### Use the finetuned model
 
-We have released a preview version of our finetuned Qwen2.5-VL-7B model (which achieves SOTA performance on CameraBench!) on HuggingFace ([7B param](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion-preview), [32B param](https://huggingface.co/chancharikm/qwen2.5-vl-32b-cam-motion-preview), [72B param](https://huggingface.co/chancharikm/qwen2.5-vl-72b-cam-motion-preview)). The model is specialized for doing camerm motion primitive classification and video-text retrieval for camera-motion captions. The usage is identical to a [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) model. A quick demo is shown below:
+We have released a preview version of our finetuned Qwen2.5-VL-7B model (which achieves SOTA performance on CameraBench!) on HuggingFace ([7B param](https://huggingface.co/chancharikm/qwen2.5-vl-7b-cam-motion), [32B param](https://huggingface.co/chancharikm/qwen2.5-vl-32b-cam-motion), [72B param](https://huggingface.co/chancharikm/qwen2.5-vl-72b-cam-motion)). The model is specialized for doing camerm motion primitive classification and video-text retrieval for camera-motion captions. The usage is identical to a [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL) model. A quick demo is shown below:
 <details>
 <summary>Generative Scoring (for classification and retrieval):</summary>
   
@@ -94,7 +94,7 @@ We have two ways of using our model for this application. The first is the recom
 import t2v_metrics
 
 ### For a single (video, text) pair:
-qwen_score = t2v_metrics.VQAScore(model='qwen2.5-vl-7b', checkpoint='chancharikm/qwen2.5-vl-7b-cam-motion-preview') 
+qwen_score = t2v_metrics.VQAScore(model='qwen2.5-vl-7b', checkpoint='chancharikm/qwen2.5-vl-7b-cam-motion') 
 video = "videos/baby.mp4" # a video path in string format
 text = "a baby crying"
 # Calculate probability of "Yes" response
@@ -112,7 +112,7 @@ import torch
 
 # Load the model
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-    "chancharikm/qwen2.5-vl-7b-cam-motion-preview", torch_dtype="auto", device_map="auto"
+    "chancharikm/qwen2.5-vl-7b-cam-motion", torch_dtype="auto", device_map="auto"
 )
 processor = AutoProcessor.from_pretrained("Qwen/Qwen2.5-VL-7B-Instruct")
 
@@ -185,7 +185,7 @@ We have two ways of using our model for this application. The first is the recom
 import t2v_metrics
 
 ### For a single (video, text) pair:
-qwen_score = t2v_metrics.VQAScore(model='qwen2.5-vl-7b', checkpoint='chancharikm/qwen2.5-vl-7b-cam-motion-preview') 
+qwen_score = t2v_metrics.VQAScore(model='qwen2.5-vl-7b', checkpoint='chancharikm/qwen2.5-vl-7b-cam-motion') 
 video = "videos/baby.mp4" # a video path in string format
 text =  "Please describe this image: "
 # Calculate probability of "Yes" response
@@ -203,12 +203,12 @@ from qwen_vl_utils import process_vision_info
 
 # default: Load the model on the available device(s)
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-    "chancharikm/qwen2.5-vl-7b-cam-motion-preview", torch_dtype="auto", device_map="auto"
+    "chancharikm/qwen2.5-vl-7b-cam-motion", torch_dtype="auto", device_map="auto"
 )
 
 # We recommend enabling flash_attention_2 for better acceleration and memory saving, especially in multi-image and video scenarios.
 # model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-#     "chancharikm/qwen2.5-vl-7b-cam-motion-preview",
+#     "chancharikm/qwen2.5-vl-7b-cam-motion",
 #     torch_dtype=torch.bfloat16,
 #     attn_implementation="flash_attention_2",
 #     device_map="auto",
