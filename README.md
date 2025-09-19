@@ -30,11 +30,11 @@
 
 ## ❓ How to Access / Evaluate on CameraBench
 1. Evaluation Code:
-   Use our official codebase for camera motion classification, VQA, and captioning tasks:
-   🔗[https://github.com/linzhiqiu/t2v\_metrics/tree/main/camerabench](https://github.com/linzhiqiu/t2v_metrics/tree/main/camerabench)
+   Use our official codebase for camera motion classification, VQA, and captioning tasks: <br>
+   🔗[CameraBench Evaluation Code](https://github.com/linzhiqiu/t2v_metrics/tree/main/camerabench)
 3. Training Dataset Access:
-   To request access to the training dataset, please complete this form with all relevant details. Providing thorough information will help us process your request more efficiently and reduce unnecessary back-and-forth by email::
-   👉 [https://forms.gle/26LB1rouSZsR29Cx9](https://forms.gle/26LB1rouSZsR29Cx9)
+   To request access to the training dataset, please complete this form with all relevant details. Providing thorough information will help us process your request more efficiently and reduce unnecessary back-and-forth by email: <br>
+   👉 [Dataset Request Form](https://forms.gle/26LB1rouSZsR29Cx9)
 
 ## 🔎 VQA evaluation on VLMs
 
