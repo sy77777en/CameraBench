@@ -62,18 +62,18 @@
                 label: 'Average AP (%)',
                 data: [16.5, 20.8, 21.0, 22.0, 22.2, 25.6, 27.3, 29.8, 35.8, 36.4, 41.3, 43.0, 49.5, 50.9, 58.2, 62.8],
                 backgroundColor: [
-                    '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', // VLMs - light blue
-                    '#F4A460', // COLMAP - orange/tan
-                    '#87CEEB', '#87CEEB', '#87CEEB', // More VLMs 
-                    '#F4A460', '#F4A460', '#F4A460', '#F4A460', '#F4A460', // SfM/SLAM - orange/tan
-                    '#90EE90' // SFT model - mint green
+                    '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', '#87CEEB', // VLMs (0-5)
+                    '#F4A460', // COLMAP (6)
+                    '#87CEEB', '#87CEEB', '#87CEEB', // InternVL2.5, Qwen2.5-VL, GPT-4o (7-9)
+                    '#F4A460', '#F4A460', '#F4A460', '#F4A460', '#F4A460', // VGGSFM, DUSt3R, MASt3R, CUT3R, MegaSAM (10-14)
+                    '#90EE90' // Qwen-2.5-VL (Ours SFT) (15)
                 ],
                 borderColor: [
                     '#4682B4', '#4682B4', '#4682B4', '#4682B4', '#4682B4', '#4682B4',
                     '#CD853F',
-                    '#4682B4', '#4682B4', '#4682B4', // More VLMs 
+                    '#4682B4', '#4682B4', '#4682B4',
                     '#CD853F', '#CD853F', '#CD853F', '#CD853F', '#CD853F',
-                    '#32CD32' // SFT model border
+                    '#32CD32'
                 ],
                 borderWidth: 2
             }]
