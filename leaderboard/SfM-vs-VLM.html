@@ -142,7 +142,7 @@
                                         pointStyle: 'rect'
                                     },
                                     {
-                                        text: 'Qwen-2.5-VL-7B (Ours SFT)',
+                                        text: 'Qwen-2.5-VL (Ours SFT)',
                                         fillStyle: '#90EE90',
                                         strokeStyle: '#32CD32',
                                         pointStyle: 'rect'
@@ -186,7 +186,7 @@
                             ctx.font = 'bold 11px Arial';
                             ctx.textAlign = 'center';
                             ctx.textBaseline = 'bottom';
-                            ctx.fillText(data, bar.x, bar.y - 5);
+                            ctx.fillText(Number(data).toFixed(1), bar.x, bar.y - 5);
                         });
                     });
                 }
